@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" verbose="1" >
+<suite name="LoginTests" verbose="1" >
     <test name="PlaceLab Login test" >
         <classes>
             <class name="org.aldinrizvo.qamp.API_Homework2.Task2.Tests.LoginWithValidCredentialsTest" />

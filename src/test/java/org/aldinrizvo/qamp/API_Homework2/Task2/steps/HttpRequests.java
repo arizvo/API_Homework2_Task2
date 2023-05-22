@@ -1,11 +1,11 @@
-package org.aldinrizvo.qamp.API_Homework2.Task2.Steps;
+package org.aldinrizvo.qamp.API_Homework2.Task2.steps;
 
 import io.restassured.response.Response;
 
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
-import static org.aldinrizvo.qamp.API_Homework2.Task2.Utils.GlobalValues.HOST;
+import static org.aldinrizvo.qamp.API_Homework2.Task2.utils.GlobalValues.HOST;
 
 public class HttpRequests {
     public static <T> Response sendWwwFormUrlEncodedPostRequest(final String endpoint, final Map<String, T> params) {
@@ -13,15 +13,6 @@ public class HttpRequests {
                 .contentType("application/x-www-form-urlencoded")
                 .baseUri(HOST)
                 .formParams(params)
-                .relaxedHTTPSValidation()
-                .post(endpoint);
-    }
-
-    public static <T> Response sendJsonPostRequest(final String endpoint, final T requestBody) {
-        return given()
-                .contentType("application/json")
-                .baseUri(HOST)
-                .body(requestBody)
                 .post(endpoint);
     }
 }

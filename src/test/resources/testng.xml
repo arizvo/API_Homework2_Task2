@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="LoginTests" verbose="1" >
+    <test name="PlaceLab Login test" >
+        <classes>
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithValidCredentialsTest" />
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithInvalidEmailTest" />
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithInvalidPasswordTest" />
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithEmptyEmailFieldTest" />
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithEmptyPasswordFieldTest" />
+        </classes>
+    </test>
+</suite>

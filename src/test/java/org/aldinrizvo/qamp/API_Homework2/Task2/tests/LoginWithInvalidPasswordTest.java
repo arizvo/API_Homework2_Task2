@@ -1,4 +1,4 @@
-package org.aldinrizvo.qamp.API_Homework2.Task2.Tests;
+package org.aldinrizvo.qamp.API_Homework2.Task2.tests;
 
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
@@ -9,17 +9,17 @@ import org.testng.annotations.Test;
 
 import java.util.logging.Logger;
 
-public class LoginWithInvalidEmailTest {
-    private static final Logger LOGGER = Logger.getLogger(LoginWithInvalidEmailTest.class.getName());
+public class LoginWithInvalidPasswordTest {
+    private static final Logger LOGGER = Logger.getLogger(LoginWithInvalidPasswordTest.class.getName());
 
     @Test(
             priority = 1,
-            description = "This Tests verifies that user can't sign in with invalid email."
+            description = "This tests verifies that user can't sign in with invalid email."
     )
     public void testLoginPageNegative() {
         final Faker faker = new Faker();
         final AuthenticationRequest authenticationRequest =
-                new AuthenticationRequest(faker.internet().emailAddress(), GlobalValues.PASSWORD);
+                new AuthenticationRequest(GlobalValues.EMAIL, faker.internet().password());
 
         final Response response = HttpRequests.sendWwwFormUrlEncodedPostRequest(
                 GlobalValues.AUTH,

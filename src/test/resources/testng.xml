@@ -3,11 +3,11 @@
 <suite name="LoginTests" verbose="1" >
     <test name="PlaceLab Login test" >
         <classes>
-            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.Tests.LoginWithValidCredentialsTest" />
-            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.Tests.LoginWithInvalidEmailTest" />
-            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.Tests.LoginWithInvalidPasswordTest" />
-            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.Tests.LoginWithEmptyEmailFieldTest" />
-            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.Tests.LoginWithEmptyPasswordFieldTest" />
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithValidCredentialsTest" />
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithInvalidEmailTest" />
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithInvalidPasswordTest" />
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithEmptyEmailFieldTest" />
+            <class name="org.aldinrizvo.qamp.API_Homework2.Task2.tests.LoginWithEmptyPasswordFieldTest" />
         </classes>
     </test>
 </suite>

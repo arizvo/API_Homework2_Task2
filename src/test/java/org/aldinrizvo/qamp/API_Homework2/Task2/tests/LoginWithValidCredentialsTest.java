@@ -1,4 +1,4 @@
-package org.aldinrizvo.qamp.API_Homework2.Task2.Tests;
+package org.aldinrizvo.qamp.API_Homework2.Task2.tests;
 
 import io.restassured.response.Response;
 import org.aldinrizvo.qamp.API_Homework2.Task2.steps.HttpRequests;
@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class LoginWithValidCredentialsTest {
     private static final Logger LOGGER = Logger.getLogger(LoginWithValidCredentialsTest.class.getName());
 
-    @Test(priority = 1, description = "This Tests verifies that user is able to log in to PlaceLab")
+    @Test(priority = 1, description = "This tests verifies that user is able to log in to PlaceLab")
     public void testLoginPagePositive() {
         final AuthenticationRequest authenticationRequest = new AuthenticationRequest(
                 GlobalValues.EMAIL,

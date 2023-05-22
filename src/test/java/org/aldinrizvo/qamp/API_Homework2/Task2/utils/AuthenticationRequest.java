@@ -18,15 +18,17 @@ public class AuthenticationRequest {
     }
 
     public void validateResponseStatusCode(final int statusCode, final boolean expectSuccess) {
+        final int expectedStatusCode;
+
         if (expectSuccess) {
-            Assertions.assertThat(statusCode)
-                    .as("Invalid status code!")
-                    .isEqualTo(201);
+            expectedStatusCode = 201;
         } else {
-            Assertions.assertThat(statusCode)
-                    .as("Invalid status code!")
-                    .isEqualTo(401);
+            expectedStatusCode = 401;
+
         }
+        Assertions.assertThat(statusCode)
+                .as("Invalid status code!")
+                .isEqualTo(expectedStatusCode);
     }
 
     public Map<String, String> getAuthParams() {

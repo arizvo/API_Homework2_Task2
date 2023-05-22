@@ -7,10 +7,7 @@ import org.aldinrizvo.qamp.API_Homework2.Task2.utils.AuthenticationRequest;
 import org.aldinrizvo.qamp.API_Homework2.Task2.utils.GlobalValues;
 import org.testng.annotations.Test;
 
-import java.util.logging.Logger;
-
 public class LoginWithInvalidEmailTest {
-    private static final Logger LOGGER = Logger.getLogger(LoginWithInvalidEmailTest.class.getName());
 
     @Test(
             priority = 1,
@@ -18,8 +15,10 @@ public class LoginWithInvalidEmailTest {
     )
     public void testLoginPageNegative() {
         final Faker faker = new Faker();
-        final AuthenticationRequest authenticationRequest =
-                new AuthenticationRequest(faker.internet().emailAddress(), GlobalValues.PASSWORD);
+        final AuthenticationRequest authenticationRequest = new AuthenticationRequest(
+                faker.internet().emailAddress(),
+                GlobalValues.PASSWORD
+        );
 
         final Response response = HttpRequests.sendWwwFormUrlEncodedPostRequest(
                 GlobalValues.AUTH,
